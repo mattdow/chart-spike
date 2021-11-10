@@ -15,8 +15,8 @@ const rejectNonAdmin = (req, res, next) => {
   // this requires that they are logged in but does not check!
   // will error if you dont also use rejectUnauthenticated
   if (req.user.access_level >= 0) {
-    // They were authenticated! User may do the next thing
-    // Note! They may not be Authorized to do all things
+    // Note! They may not be Authorized to do all things,
+    // but you can control that with other conditionals
     next();
   } else {
     // failure best handled on the server. do redirect here.
