@@ -6,26 +6,40 @@ function BarChart() {
     const chartData = {
                     labels: ['Eagles', 'Birdies', 'Pars', 'Bogies', 'Worse'],
                     datasets: [{
-                        label: 'Hole Scores',
+                        label: '2020 Hole Scores',
                         data: [1, 5, 26, 13, 8],
-                        backgroundColor: [
-                            'Green',
-                            'Blue',
-                            'Gray',
-                            'Yellow',
-                            'Red'
-                        ]
+                        backgroundColor: ['Blue']
+                    },
+                    {
+                        label: '2021 Hole Scores',
+                        data: [2, 16, 46, 17, 4],
+                        backgroundColor: ['Orange']
+    
                     }]
                 }
+    const chartOptions = {
+        scales: {
+            x: {
+                grid: {
+                    display:false
+                }
+            },
+            y: {
+                grid: {
+                    display:false
+                }   
+            }
+        },
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+    }
     return (
         <div>
             <Bar
                 data={chartData}
                 height={400}
                 width={600}
-                options={{
-                    maintainAspectRatio: false
-                }}
+                options={chartOptions}
             />
         </div>
     )
