@@ -32,6 +32,10 @@ function Nav() {
               Bar Chart
             </Link>
 
+            <Link className="navLink" to="/scatterchart">
+              Scatter Chart
+            </Link>
+
             <Link className="navLink" to="/info">
               Info Page
             </Link>

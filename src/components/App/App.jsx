@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import BarChart from '../BarChart/BarChart';
+import ScatterChart from '../ScatterChart/ScatterChart';
 
 import './App.css';
 
@@ -74,6 +75,13 @@ function App() {
             path="/barchart"
           >
             <BarChart />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            exact
+            path="/scatterchart"
+          >
+            <ScatterChart />
           </ProtectedRoute>
 
           <Route
